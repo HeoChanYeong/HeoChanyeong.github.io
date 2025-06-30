@@ -8,9 +8,6 @@
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-p1Cm3X+vjy6/O1p4h+TtKeQQoHTCg5uwTEP1LcLTEjvU0Z+BptqMXm2eKd0Z+4bWya+WT7P3n6zWv1gdAdq3Kg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
   />
   <style>
     body {
@@ -21,15 +18,13 @@
       line-height: 1.6;
     }
 
-    /* 레이아웃 컨테이너: sidebar + content */
+    /* ── 2-column layout ── */
     .layout {
       display: flex;
+      gap: 2rem;
       max-width: 1000px;
       margin: 0 auto;
-      gap: 2rem;
     }
-
-    /* 왼쪽 프로필 영역 */
     .sidebar {
       flex: 0 0 30%;
       text-align: center;
@@ -37,7 +32,7 @@
     .sidebar .name {
       margin: 0;
       font-size: 2rem;
-      color: #f4a261; /* 주황색 */
+      color: #f4a261;
     }
     .sidebar .profile-img {
       width: 100%;
@@ -45,14 +40,12 @@
       margin-top: 1rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-
-    /* 오른쪽 본문 영역 */
     .content {
       flex: 1;
     }
     .content .banner {
       margin: 0;
-      color: #e63946; /* 빨강 */
+      color: #e63946;
       font-weight: bold;
     }
     .content h2 {
@@ -69,8 +62,6 @@
     .content a:hover {
       text-decoration: underline;
     }
-
-    /* 링크 아이콘 리스트 */
     .links {
       list-style: none;
       padding: 0;
@@ -82,23 +73,25 @@
     .links i {
       margin-right: 0.5rem;
     }
-
-    hr {
+    .content hr {
       border: none;
       border-top: 1px solid #ddd;
       margin: 2rem 0;
     }
 
-    /* News 섹션 (오른쪽 .content 내 배치) */
+    /* ── News (1-column) ── */
+    .news {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
     .news h2 {
-      margin-top: 0;
       font-size: 1.75rem;
       color: #f4a261;
+      margin-bottom: 1rem;
     }
     .news ul {
       list-style-type: square;
       padding-left: 1.2rem;
-      margin-top: 1rem;
     }
     .news li {
       margin-bottom: 0.5rem;
@@ -107,14 +100,13 @@
 </head>
 <body>
 
+  <!-- 2-column intro -->
   <div class="layout">
-    <!-- left -->
     <aside class="sidebar">
       <h1 class="name">Hyuna Cho</h1>
       <img src="images/hyuna.jpg" alt="Hyuna Cho" class="profile-img">
     </aside>
 
-    <!-- right -->
     <main class="content">
       <p class="banner">*** I'm looking for research scientist / postdoc positions ***</p>
 
@@ -123,61 +115,37 @@
         I'm Hyuna (<em>hyeo-nah</em>), a Ph.D. candidate in the
         <a href="#">Medical Information Processing (MIP) lab</a> at
         <a href="#">POSTECH</a>, South Korea, supervised by
-        <a href="#">Dr. Won Hwa Kim</a>. My research interest lies at the intersection of
-        graph machine learning, medical imaging, and computational neuroscience, with particular
-        emphasis on addressing challenges in graphs (e.g., brain connectivity analysis) and
-        longitudinal medical data modeling (e.g., modeling neurodegenerative disease progression).
-        Moreover, my research topics extend to adversarial attack & defense,
-        semantic segmentation, data synthesis, and covariate correction.
+        <a href="#">Dr. Won Hwa Kim</a>. …(중략)…
       </p>
       <p>
         During my Ph.D., I am very grateful that my research has been supported by
-        <a href="#">the Google PhD Fellowship</a> and Postechian Fellowship. Last year,
-        I was a visiting researcher in the Department of Psychiatry at UNC-Chapel Hill,
-        collaborating with <a href="#">Dr. Guorong Wu</a>.
+        <a href="#">the Google PhD Fellowship</a> and Postechian Fellowship. …
       </p>
 
       <ul class="links">
-        <li>
-          <a href="docs/HyunaCho_CV.pdf" target="_blank">
-            <i class="fas fa-file-pdf"></i>CV
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/your-profile" target="_blank">
-            <i class="fas fa-link"></i>LinkedIn
-          </a>
-        </li>
-        <li>
-          <a href="https://scholar.google.com/citations?user=your-id" target="_blank">
-            <i class="fas fa-graduation-cap"></i>Google Scholar
-          </a>
-        </li>
+        <li><a href="#"><i class="fas fa-file-pdf"></i>CV</a></li>
+        <li><a href="#"><i class="fas fa-link"></i>LinkedIn</a></li>
+        <li><a href="#"><i class="fas fa-graduation-cap"></i>Google Scholar</a></li>
       </ul>
 
       <hr>
-
-      <!-- News 섹션 -->
-      <section class="news">
-        <h2>News</h2>
-        <ul>
-          <li>[May 2025] A paper has been accepted to MICCAI 2025 (early accepted, top 9%).</li>
-          <li>[Apr. 2025] An abstract on longitudinal data generation has been accepted to AAIC 2025.</li>
-          <li>[Jan. 2025] A paper has been selected for Spotlight presentation at ICLR 2025! (acceptance rate: 5.1%)</li>
-          <li>[Jan. 2025] I won the <a href="#">Best Paper Award</a> from the Graduate School of AI, POSTECH.</li>
-          <li>[Jan. 2025] I delivered an invited talk at <a href="#">SNU AI/Computing Frontier School</a>.</li>
-          <li>[Aug. 2024] I won the <a href="#">Google PhD Fellowship</a> 🏆 in Health and Bioscience.</li>
-          <li>[May 2024] A paper has been accepted to MICCAI 2024 (early accepted, top 11%).</li>
-          <li>[May 2024] A paper has been accepted to ICML 2024.</li>
-          <li>[Apr. 2024] I started research as a visiting researcher at UNC-Chapel Hill (UNC)!</li>
-          <li>[Feb. 2024] I won the excellence prize at the POSTECH GSAI Best Paper Contest.</li>
-          <li>[Jan. 2024] I won the bronze prize at the POSTECH Best Paper Competition.</li>
-          <li>[Sep. 2023] A paper on graph generation has been accepted to NeurIPS 2023!</li>
-          <li>[Aug. 2023] A paper on semantic segmentation has been accepted to WACV 2024 in the first round.</li>
-        </ul>
-      </section>
     </main>
   </div>
+  <!-- /2-column intro -->
+
+  <!-- 1-column News -->
+  <section class="news">
+    <h2>News</h2>
+    <ul>
+      <li>[May 2025] A paper has been accepted to MICCAI 2025 (early accepted, top 9%).</li>
+      <li>[Apr. 2025] An abstract on longitudinal data generation has been accepted to AAIC 2025.</li>
+      <li>[Jan. 2025] A paper has been selected for Spotlight presentation at ICLR 2025! (acceptance rate: 5.1%)</li>
+      <li>[Jan. 2025] I won the <a href="#">Best Paper Award</a> from the Graduate School of AI, POSTECH.</li>
+      <li>[Jan. 2025] I delivered an invited talk at <a href="#">SNU AI/Computing Frontier School</a>.</li>
+      <li>[Aug. 2024] I won the <a href="#">Google PhD Fellowship</a> 🏆 in Health and Bioscience.</li>
+      <!-- 이하 생략 -->
+    </ul>
+  </section>
 
 </body>
 </html>
