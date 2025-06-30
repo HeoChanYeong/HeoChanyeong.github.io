@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hyuna Cho</title>
-  <!-- Font Awesome for icons -->
+  <title>Chanyeong Heo</title>
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -18,134 +17,290 @@
       line-height: 1.6;
     }
 
-    /* ── 2-column layout ── */
-    .layout {
+    /* ── 1) 상단 2-column 레이아웃 ── */
+    .intro-layout {
       display: flex;
       gap: 2rem;
-      max-width: 1000px;
+      max-width: 900px;
       margin: 0 auto;
     }
-    .sidebar {
+    .intro-layout .sidebar {
       flex: 0 0 30%;
       text-align: center;
     }
-    .sidebar .name {
+    .intro-layout .sidebar .name {
       margin: 0;
       font-size: 2rem;
-      color: #f4a261;
+      color: #61aff4;
     }
-    .sidebar .profile-img {
-      width: 100%;
+    .intro-layout .sidebar .profile-img {
+      width: 80%;
       border-radius: 0.5rem;
       margin-top: 1rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .content {
+    .intro-layout .content {
       flex: 1;
     }
-    .content .banner {
+    .intro-layout .banner {
       margin: 0;
-      color: #e63946;
+      color: #000000;
       font-weight: bold;
     }
-    .content h2 {
+    .intro-layout h2 {
       margin-top: 1rem;
       margin-bottom: 0.5rem;
     }
-    .content p {
+    .intro-layout p {
       margin-top: 0.5rem;
     }
-    .content a {
+    .intro-layout a {
       color: #1d3557;
       text-decoration: none;
     }
-    .content a:hover {
+    .intro-layout a:hover {
       text-decoration: underline;
     }
-    .links {
+    .intro-layout .links {
       list-style: none;
       padding: 0;
       margin: 1rem 0;
+      display: flex;
+      gap: 2rem;
     }
-    .links li {
-      margin-bottom: 0.5rem;
+    .intro-layout .links li {
+      margin: 0;
     }
-    .links i {
+    .intro-layout .links i {
       margin-right: 0.5rem;
     }
-    .content hr {
+
+    /* ── 2) HR full-width ── */
+    hr.full-width {
       border: none;
       border-top: 1px solid #ddd;
-      margin: 2rem 0;
+      margin: 2rem auto;
+      max-width: 1000px;
     }
 
-    /* ── News (1-column) ── */
-    .news {
+    /* ── 3) News & Publications: 1-column 컨테이너 ── */
+    .single-column {
       max-width: 1000px;
       margin: 0 auto;
     }
+
+    /* News 스타일 */
     .news h2 {
+      color: #61aff4;
       font-size: 1.75rem;
-      color: #f4a261;
       margin-bottom: 1rem;
     }
     .news ul {
       list-style-type: square;
       padding-left: 1.2rem;
+      margin: 0 0 2rem;
     }
     .news li {
       margin-bottom: 0.5rem;
+    }
+
+    /* Selected publications 스타일 */
+    .publications h2 {
+      color: #61aff4;
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .publications p {
+      margin-bottom: 1.5rem;
+    }
+    .pub-item { /* each paper */
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      align-items: flex-start;
+    }
+    .pub-item img {
+      width: 200px;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      object-fit: cover;
+    }
+    .pub-details h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1.125rem;
+    }
+    .pub-details h4 {
+      margin: 0 0 0.5rem;
+      font-weight: bold;
+    }
+    .pub-details p {
+      margin: 0.25rem 0;
+    }
+    .label {
+      color: #e63946;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <!-- 2-column intro -->
-  <div class="layout">
+  <!-- 1) 상단 두 컬럼 -->
+  <div class="intro-layout">
     <aside class="sidebar">
-      <h1 class="name">Hyuna Cho</h1>
-      <img src="images/hyuna.jpg" alt="Hyuna Cho" class="profile-img">
+      <h1 class="name">Chanyeong Heo</h1>
+      <img src="images/hcy.jpg" alt="Chanyeong Heo" class="profile-img">
     </aside>
-
     <main class="content">
-      <p class="banner">*** I'm looking for research scientist / postdoc positions ***</p>
-
+      <!-- <p class="banner"></p> -->
       <h2>Hello!</h2>
+      <p>I’m Chanyeong, a master’s student in the
+        <a href="https://ds.mju.ac.kr"><u>DataScience Lab</u></a> at
+        <a href="https://mju.ac.kr">Myongji Universty</a>, South Korea, under the supervision of
+        <a href="https://ds.mju.ac.kr/professor.html"><u>Prof. Jaehee Jung</u></a>.
+        My research focuses on artificial intelligence (AI), particularly on <b>Core</b> (diffusion theory-based) models + <b>Domain</b> (medical imaging). Specifically, my work involves generating synthetic medical data using diffusion models and leveraging this data to address data scarcity and improve medical image segmentation.
+        </p>
       <p>
-        I'm Hyuna (<em>hyeo-nah</em>), a Ph.D. candidate in the
-        <a href="#">Medical Information Processing (MIP) lab</a> at
-        <a href="#">POSTECH</a>, South Korea, supervised by
-        <a href="#">Dr. Won Hwa Kim</a>. …(중략)…
+        My key research interests include:
       </p>
       <p>
-        During my Ph.D., I am very grateful that my research has been supported by
-        <a href="#">the Google PhD Fellowship</a> and Postechian Fellowship. …
+        Diffusion Models, Medical Imaging, Medical Image Segmentation, Data Analysis using Generative AI
       </p>
-
       <ul class="links">
-        <li><a href="#"><i class="fas fa-file-pdf"></i>CV</a></li>
-        <li><a href="#"><i class="fas fa-link"></i>LinkedIn</a></li>
-        <li><a href="#"><i class="fas fa-graduation-cap"></i>Google Scholar</a></li>
+        <li>
+          <a 
+            href="./HeoCV.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <i class="fas fa-file-pdf"></i>CV
+          </a>
+        </li>
+        <li><a href="https://github.com/HeoChanYeong"><i class="fab fa-github"></i>GitHub</a></li>
+        <li><a href="https://scholar.google.com/citations?user=8njxqe4AAAAJ&hl=ko&oi=sra"><i class="fas fa-graduation-cap"></i>Google Scholar</a></li>
       </ul>
-
-      <hr>
     </main>
   </div>
-  <!-- /2-column intro -->
 
-  <!-- 1-column News -->
-  <section class="news">
-    <h2>News</h2>
-    <ul>
-      <li>[May 2025] A paper has been accepted to MICCAI 2025 (early accepted, top 9%).</li>
-      <li>[Apr. 2025] An abstract on longitudinal data generation has been accepted to AAIC 2025.</li>
-      <li>[Jan. 2025] A paper has been selected for Spotlight presentation at ICLR 2025! (acceptance rate: 5.1%)</li>
-      <li>[Jan. 2025] I won the <a href="#">Best Paper Award</a> from the Graduate School of AI, POSTECH.</li>
-      <li>[Jan. 2025] I delivered an invited talk at <a href="#">SNU AI/Computing Frontier School</a>.</li>
-      <li>[Aug. 2024] I won the <a href="#">Google PhD Fellowship</a> 🏆 in Health and Bioscience.</li>
-      <!-- 이하 생략 -->
-    </ul>
-  </section>
+  <!-- 2) 전체 너비 HR -->
+  <hr class="full-width">
 
+  <!-- 3) News & Publications: 1컬럼 -->
+  <div class="single-column">
+    <section class="news">
+      <h2>News</h2>
+      <ul>
+        <li>[Jun. 2025] <b>One paper has been accepted to MICCAI 2025!!</b></li>
+        <li>[Jun. 2025] Two paper has been submitted to IEEE Access and is currently under review.</li>
+        <li>[Apr. 2025] <b>One paper has been accepted to SIGIR 2025!!</b></li>
+        <li>[Mar. 2025] One paper has been submitted to IROS 2025 and is currently under review. <span style="color: red;">Rejected(Jun. 2025)</span></li>
+        <li>[Feb. 2025] One paper has been submitted to MICCAI 2025 and is currently under review.</li>
+        <li>[Feb. 2025] One paper has been submitted to SIGIR 2025 and is currently under review.</li>
+        <li>[Oct. 2024] One paper has been submitted to IEEE Robotics and Automation Letters (RA-L) and is currently under review. <span style="color: red;">Rejected(Dec. 2024)</span></li>
+        <li>[Aug. 2024] <b>I have been selected as the principal investigator for a research project funded by the National Research Foundation’s '석사과정생연구장려금지원' (₩12,000,000)!!</b></li>
+        <li>[Aug. 2024] One paper has been submitted to Computers in Biology and Medicine (CIBM)  and is currently under review.</li>
+        <li>[Mar. 2024] One paper has been submitted to IEEE Transactions on Medical Imaging (TMI) and is currently under review. <span style="color: red;">Rejected(Jun. 2024)</span></li>
+      </ul>
+    </section>
+
+    <section class="publications">
+      <h2>Publications</h2>
+
+      <div class="pub-item">
+        <img src="images/miccai2025.png" alt="Diagram for RIA³">
+        <div class="pub-details">
+          <p>
+            Semantic Interpolative Diffusion Model: Bridging the Interpolation to Masks and Colonoscopy Image Synthesis for Robust Generalization
+          </p>
+          <p><b>Chanyeong Heo</b>, Jaehee Jung</p>
+          <p><em>MICCAI 2025(Accepted)</em> <a href="https://github.com/HeoChanYeong/SIDM" target="_blank">[Code]</a></p>
+        </div>
+      </div>
+      
+      <div class="pub-item">
+        <img src="images/sigir2025.png" alt="Diagram for RIA³">
+        <div class="pub-details">
+          <p>
+            ReCDAP: Relation-Based Conditional Diffusion with Attention Pooling for Few-Shot Knowledge Graph Completion
+          </p>
+          <p>Jeongho Kim, <b>Chanyeong Heo</b>, Jaehee Jung</p>
+          <p><em>SIGIR 2025(Accepted)</em> <a href="https://arxiv.org/abs/2505.07171" target="_blank">[arXiv]</a> <a href="https://github.com/HeoChanYeong/ReCDAP-FKGC" target="_blank">[Code]</a></p>
+        </div>
+      </div>
+      
+      <div class="pub-item">
+        <img src="images/ieeeaccess2.png" alt="Diagram for RIA³">
+        <div class="pub-details">
+          <p>
+            HADP: Hybrid A*-Diffusion Planner for Robust Navigation in Dynamic Obstacle Environments
+          </p>
+          <p>Mingyu Kim*, <b>Chanyeong Heo*</b>, Jaehee Jung (*co-first authors)</p>
+          <p><em>IEEE Aceess(Under Review)</em></p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <img src="images/ieeeaccess1.png" alt="Diagram for RIA³">
+        <div class="pub-details">
+          <p>
+            Semantic Information Loss Function: A Novel Approach Addressing the Limitations of Pixel-Based Segmentation Loss in Medical Image Segmentation
+          </p>
+          <p><b>Chanyeong Heo</b>, Mingyu Kim, Jaehee Jung</p>
+          <p><em>IEEE Aceess(Under Review)</em></p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <img src="images/cibm.png" alt="Diagram for RIA³">
+        <div class="pub-details">
+          <p>
+            Controllable Mask Diffusion Model for medical annotation synthesis with semantic information extraction
+          </p>
+          <p><b>Chanyeong Heo</b>, Jaehee Jung</p>
+          <p><em>Computers in Biology and Medicine(Under Review)</em></p>
+        </div>
+      </div>
+      
+
+      
+    </section>
+
+    <section class="news">
+      <h2>Patents</h2>
+      <ul>
+        <li><b>Chanyeong Heo</b>, Mingyu Kim, Jaehee Jung, "System for producing dynamic obstacle avoidance path using conditional diffusion model", Korean Patent</li>
+        <li><b>Chanyeong Heo</b>, Mingyu Kim, Jaehee Jung, "Method for producing dynamic obstacle avoidance path using conditional diffusion model", Korean Patent</li>
+        <li><b>Chanyeong Heo</b>, Jaehee Jung, "Medical image generation system and medical image generation method including controllable lesion area", Korean Patent</li>
+        
+  
+      </ul>
+    </section>
+
+    <section class="news">
+      <h2>Awards & Honors</h2>
+      <ul>
+        <li><b>Myongji Outstanding Freshmen Scholarship</b>, Myongji University, 2024-2025</li>
+        <li><b>Best Paper Award (Oral)</b>, ICNGC, 2024</li>
+        <li><b>Myongji BaekMa Scholarship (Half Tuition)(₩2,270,000)</b>, Myongji University, 2023</li>
+        <li><b>Academic Activities Encourage Scholarship (₩1,000,000)</b>, Myongji University, 2023</li>
+        <li><b>1st Place Award, SW프로그램 경진대회 (₩1,000,000)</b>, Myongji University, 2023</li>
+        <li><b>Myongji BaekMa Scholarship (Half Tuition)(₩4,547,000)</b>, Myongji University, 2023</li>
+        <li><b>Academic Activities Encourage Scholarship</b>, Myongji University, 2023</li>
+        <li><b>Academic Activities Encourage Scholarship (₩500,000)</b>, Myongji University, 2023</li>
+        <li><b>Best Paper Award (Oral)</b>, 한국차세대컴퓨팅학회춘계학술대회, 2023</li>
+        <li><b>Encouragement Award, 전국 K-Hackathon 10</b>, 과학기술정보통신부, 2022</li>
+        <li><b>1st Place Award, 5군단 AI Makerthon (Prize: Field Trip to Silicon Valley, USA)</b>, 5군단 & Naver, 2021</li>
+        <li><b>Outstanding Award, 5군단 AI Ideathon</b>, 5군단 & KT, 2021</li>
+        
+      </ul>
+    </section>
+
+    <section class="news">
+      <h2>Grants</h2>
+      <ul>
+        <li><b>허찬영</b>, "심장질환 예측을 위한 심초음파와 의료텍스트 데이터의 멀티모달 조건부 디퓨전 모델", NRF 석사과정생연구장려금지원 (₩12,000,000)</li>
+      </ul>
+    </section>
+    
+  </div>
 </body>
 </html>
