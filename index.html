@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hyuna Cho</title>
+  <!-- Font Awesome (아이콘용) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p1Cm3X+vjy6/O1p4h+TtKeQQoHTCg5uwTEP1LcLTEjvU0Z+BptqMXm2eKd0Z+4bWya+WT7P3n6zWv1gdAdq3Kg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 0 auto;
+      gap: 2rem;
+    }
+    /* 왼쪽 컬럼 */
+    .left {
+      flex: 0 0 30%;
+      text-align: center;
+    }
+    .left .name {
+      margin-top: 0;
+      font-size: 2rem;
+      color: #f4a261; /* 주황색 */
+    }
+    .left .profile-img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    /* 오른쪽 컬럼 */
+    .right {
+      flex: 1;
+    }
+    .banner {
+      color: #e63946; /* 빨간색 */
+      font-weight: bold;
+      margin-top: 0;
+    }
+    .right h2 {
+      margin-bottom: 0.5rem;
+    }
+    .right p {
+      margin-top: 0.5rem;
+    }
+    .right a {
+      color: #1d3557;
+      text-decoration: none;
+    }
+    .right a:hover {
+      text-decoration: underline;
+    }
+    .links {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+    .links li {
+      margin-bottom: 0.5rem;
+    }
+    .links i {
+      margin-right: 0.5rem;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 왼쪽 -->
+    <div class="left">
+      <h1 class="name">Hyuna Cho</h1>
+      <img
+        src="images/hyuna.jpg"
+        alt="Hyuna Cho"
+        class="profile-img"
+      >
+    </div>
+
+    <!-- 오른쪽 -->
+    <div class="right">
+      <p class="banner">*** I'm looking for research scientist / postdoc positions ***</p>
+      <h2>Hello!</h2>
+      <p>
+        I'm Hyuna (<em>hyeo-nah</em>), a Ph.D. candidate in the
+        <a href="#">Medical Information Processing (MIP) lab</a> at
+        <a href="#">POSTECH</a>, South Korea, supervised by
+        <a href="#">Dr. Won Hwa Kim</a>. My research interest lies at the intersection of
+        graph machine learning, medical imaging, and computational neuroscience, with particular
+        emphasis on addressing challenges in graphs (e.g., brain connectivity analysis) and
+        longitudinal medical data modeling (e.g., modeling neurodegenerative disease progression).
+        Moreover, my research topics extend to adversarial attack &amp; defense, semantic
+        segmentation, data synthesis, and covariate correction.
+      </p>
+      <p>
+        During my Ph.D., I am very grateful that my research has been supported by
+        <a href="#">the Google PhD Fellowship</a> and Postechian Fellowship. Last year,
+        I was a visiting researcher in the Department of Psychiatry at
+        <a href="#">UNC-Chapel Hill</a>, collaborating with
+        <a href="#">Dr. Guorong Wu</a>.
+      </p>
+
+      <ul class="links">
+        <li>
+          <a href="docs/HyunaCho_CV.pdf" target="_blank">
+            <i class="fas fa-file-pdf"></i>CV
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+            <i class="fas fa-link"></i>LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://scholar.google.com/citations?user=your-id" target="_blank">
+            <i class="fas fa-graduation-cap"></i>Google Scholar
+          </a>
+        </li>
+      </ul>
+
+      <hr>
+      <!-- 추가 내용이 있으면 여기 아래에 작성 -->
+    </div>
+  </div>
+
+</body>
+</html>
